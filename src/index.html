@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Clock Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Style picker ── -->
+  <div id="onboarding" class="screen hidden">
+    <div class="onboarding-inner">
+      <header>
+        <h1>The Clock Project</h1>
+        <p>Time told through photography. Pick one or combine styles.</p>
+      </header>
+
+      <div class="style-grid">
+
+        <button class="style-card" data-style="clock_face">
+          <div class="card-img-wrap">
+            <img data-preview="clock_face" alt="Clock Face" />
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="card-check">✓</div>
+          <div class="card-info">
+            <span class="card-name">Clock Face</span>
+            <span class="card-desc">Close-up of clock faces</span>
+          </div>
+        </button>
+
+        <button class="style-card" data-style="clock_face_wide">
+          <div class="card-img-wrap">
+            <img data-preview="clock_face_wide" alt="Clock Wide" />
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="card-check">✓</div>
+          <div class="card-info">
+            <span class="card-name">Clock Wide</span>
+            <span class="card-desc">Wide-angle clock scenes</span>
+          </div>
+        </button>
+
+        <button class="style-card" data-style="address">
+          <div class="card-img-wrap">
+            <img data-preview="address" alt="Street Numbers" />
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="card-check">✓</div>
+          <div class="card-info">
+            <span class="card-name">Street Numbers</span>
+            <span class="card-desc">House &amp; building numbers</span>
+          </div>
+        </button>
+
+        <button class="style-card" data-style="angles">
+          <div class="card-img-wrap">
+            <img data-preview="angles" alt="Angles" />
+            <div class="card-shimmer"></div>
+          </div>
+          <div class="card-check">✓</div>
+          <div class="card-info">
+            <span class="card-name">Angles</span>
+            <span class="card-desc">Lines and angles in the world</span>
+          </div>
+        </button>
+
+      </div>
+
+      <div class="onboarding-footer">
+        <div id="selection-hint" class="selection-hint">Select one or more styles</div>
+        <div id="getting-ready" class="getting-ready hidden">
+          <div class="spinner"></div>
+          <span>Preparing your first hour…</span>
+        </div>
+        <button id="start-btn" class="start-btn" disabled>Select a style to continue</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Clock view ── -->
+  <div id="clock-screen" class="screen hidden">
+    <img id="img-a" class="clock-img active" alt="" />
+    <img id="img-b" class="clock-img" alt="" />
+    <div id="time-label"></div>
+    <div id="hud">
+      <button id="fullscreen-btn" title="Fullscreen">⛶</button>
+      <button id="back-btn" title="Change style">←</button>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
